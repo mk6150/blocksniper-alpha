@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration 
+    version="10.8" 
+    appVersion="18.10.1142" 
+    publisher="Turbo.net">
+  <Expiration> 
+    daysLimit="0" 
+    expirationDate="2099-01-01T00:00:00Z" 
+    expirationWarningDays="0"
+  </Expiration>
+    <ExpiredMessage>
+        The evaluation period for this application has expired. Please contact your system administrator or the application publisher for assistance.
+    </ExpiredMessage>
+    <ExpirationWarning>
+        This application will expire in %d days.
+    </ExpirationWarning>
+    <UnreachableWarning>
+        The current time could not be validated with the time server. Please check your network connection and try again. 
+    </UnreachableWarning>
+  </Expiration>
+  <Output 
+    diagnosticMode="false" 
+    sourcePackage="" 
+    includeRuntimeDotNetImage="false" 
+    allowFullIsolation="false" 
+    enableSync="false" 
+    enableAutoUpdate="false" 
+    showLaunchSettings="false" 
+    isolationLevel="WriteCopy" 
+    hub="https://turbo.net" 
+    isolationOptions="MergeUser" />
+  <Msi> 
+    outputMsiPath="" 
+    title="" 
+    subject="" 
+    keywords="" 
+    productName="" 
+    productVersion="" 
+    manufacturer="" 
+    productLanguage="1033" 
+    author="" 
+    description="" 
+    manufacturerUrl="" 
+    autoBuild="False" 
+    isolatePerUser="True" 
+    applicationFolder="" 
+    upgradePreviousVersion="True" 
+    productCode="{6E9CCA04-77C5-40FE-8CDA-87007381F9CB}" 
+    upgradeCode="{572C3CCD-2150-4A4E-95FF-270321E8CD78}" 
+    componentId="{C3BBF81B-F82E-476B-A685-03A1EE279BCC}" 
+    </Msi>
+  <Network>
+    <Proxy>
+        enableTCP="false" 
+        enableUDP="false" 
+    </Proxy>
+  </Network>
+  <Clipboard 
+    isolationMode="Merge" 
+    </Cliboard>
+  <EnvironmentVariableExGlobalSettings> 
+    isolationMode="WriteCopy" 
+    </EnvironmentVariableExGlobalSettings>
+  <Dependencies />
+  <Requirements />
+  <Packages trimDotNet="True">
+    <DirectX />
+    <Java />
+  </Packages>
+  <VirtualizationSettings> 
+    enabled="True" suppressBranding="True" 
+    deleteSandbox="False" 
+    shutdownProcessTree="False" 
+    enhancedDEPCompatibility="False" 
+    notifyProcessStarts="False" 
+    enableLegacySecurityPassthrough="False" 
+    trimUACManifest="False" forceFIPSCompliance="False" 
+    forceReadShareFiles="False" isolateWindowClasses="True" 
+    readOnlyVirtualization="False" 
+    disableXenocodeCommandLine="False" 
+    suppressSandboxCollisionCheck="False" 
+    subsystem="Inherit" 
+    targetArchitecture="x86" 
+    sandboxPath="@APPDATALOCAL@\Turbo.net\Sandbox\@TITLE@\@VERSION@" 
+    exeOptimization="False" 
+    compressPayload="False" 
+    forceIndicateRunningElevated="True" 
+    launchChildProcsAsUser="True" 
+    enableDRMCompatibility="False" 
+    faultExecutablesIntoSandbox="False" 
+    minSandboxSpaceAvail="-1" 
+    honorWow6464AccessFlag="True" 
+    suppressPopups="False" 
+    hideShellWindow="False" 
+    isDriverSVM="False" 
+    forceEntryLayerIsolation="False" 
+    stubExeCachePath="" 
+    spoonCachePath="" 
+    waitForChildOnly="True" 
+    httpUrlPassthrough="False" 
+    mergeStartupDir="False" 
+    allowGlobalWindowHooks="False" 
+    breakIdenticalSendMessageRecursion="False" 
+    extendedWinXPCompatibility="False" 
+    isolateProcessNames="False" 
+    isolateNonSystemDrives="False" 
+    isolateNetworkShares="False" 
+    disableProxySupportForRouteMaps="False">
+    <ChildProcessVirtualization spawnVm="true" 
+    spawnExternalComServers="true" />
+  </VirtualizationSettings>
+  <XLayers> 
+    xlayerSearchPattern="" 
+   </XLayers>
+  <NamedObjectIsolation> 
+    enabled="False" 
+  </NamedObjectIsolation>
+  <Dns />
+  <Device>
+    <MachineName />
+    <MachineSid />
+    <NetworkAdapters />
+    <ComputerSystemProduct />
+  </Device>
+  <EnvironmentStats />
+  <WorkingDirectory> 
+    option="SpecificDirectory" 
+    specifiedDirectory="@APPDIR@" 
+   </WorkingDirectory>
+  <DisabledVmSettings />
+  <StartupShims />
+  <ShutdownShims />
+  <Scripts />
+  <ActiveDirectory />
+  <CustomMetadata />
+  <StandardMetadata />
+  <SplashImage> 
+    path="" 
+    transparency="Magenta" 
+    seconds="6" 
+  </SplashImage>
+  <StartupFiles />
+  <Layers>
+    <Layer name="Default">
+      <Filesystem>
+        <Directory name="@APPDATA@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@APPDATACOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@APPDATALOCAL@" isolation="Full" readOnly="False" hide="False" noSync="True" />
+        <Directory name="@APPDATALOCALLOW@" isolation="Full" readOnly="False" hide="False" noSync="True" />
+        <Directory name="@APPDIR@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@DESKTOP@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@DESKTOPCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@DOCUMENTS@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@DOCUMENTSCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@DOWNLOADS@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@FAVORITES@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@FAVORITESCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@MUSIC@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@MUSICCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PICTURES@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PICTURESCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PROFILE@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PROFILECOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PROGRAMFILES@" isolation="Merge" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PROGRAMFILESCOMMON@" isolation="Merge" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PROGRAMFILESCOMMONX86@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PROGRAMFILESX86@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PROGRAMS@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@PROGRAMSCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@STARTMENU@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@STARTMENUCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@STARTUP@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@STARTUPCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@SYSDRIVE@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@SYSTEM@" isolation="Merge" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@SYSWOW64@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@TEMPLATES@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@TEMPLATESCOMMON@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@VIDEOS@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Directory name="@WINDIR@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+      </Filesystem>
+      <Registry>
+        <Key> 
+            name="@HKCR@" 
+            isolation="Full" 
+            readOnly="False" 
+            hide="False" 
+            noSync="False" 
+        </Key>
+        <Key name="@HKCU@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Key name="@HKLM@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+        <Key name="@HKU@" isolation="Full" readOnly="False" hide="False" noSync="False" />
+      </Registry>
+      <EnvironmentVariables />
+      <EnvironmentVariablesEx />
+      <PortMaps />
+      <ObjectMaps />
+      <Services />
+      <Shortcuts>
+        <Folder name="Desktop" />
+        <Folder name="Programs Menu" />
+        <Folder name="SendTo" />
+      </Shortcuts>
+      <ProgIds />
+      <Extensions />
+      <DefaultPrograms />
+      <SnapshotDirectories />
+      <ShellExtensions />
+    </Layer>
+  </Layers>
+  <Publishers />
+  <HarvestSettings />
+  <Id value="{104914A6-C803-49ED-B0FA-022FF808CC4B}" />
+  <OutputLocation value="" />
+  <OutputFile value="" />
+  <ProjectType value="Component" />
+</Configuration>

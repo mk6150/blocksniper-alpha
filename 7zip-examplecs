@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Diagnostics;
+
+class Program
+{
+    static void Main()
+    {
+        string sourceName = "ExampleText.txt";
+        string targetName = "Example.gz";
+
+        // 1
+        // Initialize process information.
+        //
+        ProcessStartInfo p = new ProcessStartInfo();
+        p.FileName = "7za.exe";
+
+        // 2
+        // Use 7-zip
+        // specify a=archive and -tgzip=gzip
+        // and then target file in quotes followed by source file in quotes
+        //
+        p.Arguments = "a -tgzip \"" + targetName + "\" \"" +
+            sourceName + "\" -mx=9";
+        p.WindowStyle = ProcessWindowStyle.Hidden;
+
+        // 3.
+        // Start process and wait for it to exit
+        //
+        Process x = Process.Start(p);
+        x.WaitForExit();
+    }
+}
+
+
+https://www.dotnetperls.com/7-zip-examples
